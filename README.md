@@ -1,2 +1,4 @@
 # selenium_practice
-Working with Selenium
+Project that focuses around working with Selenium
+
+Make sure to see selenium
