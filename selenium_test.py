@@ -1,6 +1,7 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.actions.wheel_input import ScrollOrigin
 
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
@@ -23,9 +24,14 @@ def google_search(search_input):
     text_box.send_keys(search_input+Keys.ENTER)
 
     time.sleep(2)
+    
+    #clickable = driver.find_element(By.ID, 'footcnt')
+    #ActionChains(driver).move_to_element(clickable).perform()
 
-    clickable = driver.find_element(By.ID, 'footcnt')
-    ActionChains(driver).move_to_element(clickable).perform()
+    scroll_origin = ScrollOrigin.from_element(text_box)
+    ActionChains(driver)\
+        .scroll_from_origin(scroll_origin, 0, 200)\
+        .perform()
 
 
 google_search('blue')
