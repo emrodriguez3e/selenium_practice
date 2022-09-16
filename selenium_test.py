@@ -8,9 +8,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
 
 
-
-
-
 ser = Service(executable_path="C:/Users/erodriguez/Documents/chromedriver.exe")
 op = webdriver.ChromeOptions()
 op.add_experimental_option('excludeSwitches', ['enable-logging'])
@@ -28,6 +25,7 @@ def google_search(search_input):
     #clickable = driver.find_element(By.ID, 'footcnt')
     #ActionChains(driver).move_to_element(clickable).perform()
 
+    text_box=driver.find_element(By.TAG_NAME, 'input')
     scroll_origin = ScrollOrigin.from_element(text_box)
     ActionChains(driver)\
         .scroll_from_origin(scroll_origin, 0, 200)\
