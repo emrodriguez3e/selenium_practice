@@ -1,4 +1,8 @@
+#! /usr/bin/env python3
+# Import stl
 import sys
+
+# Import selenium libraries
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.actions.wheel_input import ScrollOrigin
