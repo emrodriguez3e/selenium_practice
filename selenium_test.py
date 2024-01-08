@@ -26,7 +26,6 @@ def google_search(search_input, driver):
     driver.implicitly_wait(10)
     
 
-
 # Choose which browser to use
 def browser_choice(search_parameter):
     driver = None
@@ -39,7 +38,6 @@ def browser_choice(search_parameter):
     else:
         driver = webdriver.Firefox()
         
-    
     # Start function
     google_search(search_parameter, driver)
     time.sleep(2)
